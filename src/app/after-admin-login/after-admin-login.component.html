@@ -1,0 +1,74 @@
+<div class="container" *ngIf="app.id == 1">
+  <h2 class="title">Manage Candidates</h2>
+
+  <!-- Form Section -->
+  <div class="form-section">
+    <div class="add-candidate-card">
+      <h3>Add Candidate</h3>
+      <form (ngSubmit)="onAddCandidate()" class="form">
+        <input type="text" [(ngModel)]="candidateData.name" name="name" placeholder="Candidate Name" required />
+        <input type="text" [(ngModel)]="candidateData.party" name="party" placeholder="Party" required />
+        <input type="text" [(ngModel)]="candidateData.partySymbol" name="partySymbol" placeholder="Party Symbol URL" required />
+        <button type="submit" class="btn">Add Candidate</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Candidate List Section -->
+  <div class="candidate-list">
+    <h3>Candidate List</h3>
+    <table class="candidate-table">
+      <thead>
+        <tr>
+          <th>Candidate Name</th>
+          <th>Party</th>
+          <th>Party Symbol</th>
+          <th>Votes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidate of candidateList">
+          <td>{{ candidate.name }}</td>
+          <td>{{ candidate.party }}</td>
+          <td><img [src]="candidate.partySymbol" alt="Party Symbol" class="symbol-img" /></td>
+          <td class="vote-count">{{ candidate.votes }}</td>
+          <td>
+            <button class="btn delete-btn" (click)="onDeleteCandidate(candidate.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Voter Authentication Section -->
+  <div class="voter-list">
+    <h3>Authenticate Voters</h3>
+    <table class="voter-table">
+      <thead>
+        <tr>
+          <th>Aadhar Number</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let voter of voterList">
+          <td>{{ voter.aadharNumber }}</td>
+          <td>{{ voter.firstName }} {{ voter.lastName }}</td>
+          <td>
+            <span [ngClass]="{'pending': !voter.authenticated, 'approved': voter.authenticated}">
+              {{ voter.authenticated ? 'Approved' : 'Pending' }}
+            </span>
+          </td>
+          <td>
+            <button *ngIf="!voter.authenticated" class="btn approve-btn" (click)="authenticateVoter(voter.aadharNumber)">
+              Approve
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

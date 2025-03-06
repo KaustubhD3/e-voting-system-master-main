@@ -1,0 +1,37 @@
+<div *ngIf="app.id === 2">
+  <div class="container">
+    <h2 class="title">Candidate List</h2>
+
+    <!-- Show remaining time for voting -->
+    <div *ngIf="isVotingAllowed">
+      <h3>Time Remaining to Vote: {{ remainingTime }}</h3>
+    </div>
+    <div *ngIf="!isVotingAllowed">
+      <h3>Voting is closed.</h3>
+    </div>
+
+    <!-- Candidate Table -->
+    <table class="candidate-table">
+      <thead>
+        <tr>
+          <th>Candidate Name</th>
+          <th>Party</th>
+          <th>Party Symbol</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidate of candidates">
+          <td>{{ candidate.name }}</td>
+          <td>{{ candidate.party }}</td>
+          <td><img [src]="candidate.partySymbol" alt="Party Symbol" class="symbol-img" /></td>
+          <td>
+            <button class="vote-btn" (click)="voteForCandidate(candidate.id)" [disabled]="hasVoted || !isVotingAllowed">
+              {{ hasVoted ? 'Already Voted' : 'Vote' }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

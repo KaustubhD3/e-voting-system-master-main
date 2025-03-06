@@ -1,0 +1,71 @@
+/* Page Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Table Styling */
+  .candidate-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .candidate-table th, .candidate-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .candidate-table th {
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .candidate-table tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+  
+  .candidate-table tr:hover {
+    background: #e9ecef;
+    transition: 0.3s;
+  }
+  
+  /* Candidate Image */
+  .symbol-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Vote Button */
+  .vote-btn {
+    padding: 8px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  .vote-btn:hover {
+    background: #218838;
+  }
+  

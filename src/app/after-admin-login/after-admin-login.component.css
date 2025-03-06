@@ -1,0 +1,112 @@
+/* Container Styling */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Section */
+.form-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.add-candidate-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Candidate List */
+.candidate-list, .voter-list {
+  margin-top: 20px;
+}
+
+.candidate-table, .voter-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.candidate-table th, .candidate-table td, .voter-table th, .voter-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.candidate-table th, .voter-table th {
+  background: #007bff;
+  color: white;
+}
+
+.symbol-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #dc3545;
+}
+
+.delete-btn:hover {
+  background: #a71d2a;
+}
+
+/* Approve Button */
+.approve-btn {
+  background: #28a745;
+}
+
+.approve-btn:hover {
+  background: #1e7e34;
+}
+
+/* Status Badges */
+.pending {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.approved {
+  color: #28a745;
+  font-weight: bold;
+}
