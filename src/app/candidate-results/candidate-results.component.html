@@ -1,0 +1,26 @@
+<div class="results-container">
+  <h2 class="title">Election Results</h2>
+
+  <!-- Winner Section -->
+  <div *ngIf="winner" class="winner-box">
+    🏆 <strong>Winner:</strong> {{ winner.name }} ({{ winner.party }}) with {{ winner.votes }} votes!
+  </div>
+
+  <!-- Results Table -->
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th>Candidate Name</th>
+        <th>Party</th>
+        <th>Votes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidate of candidates" [class.winner-row]="candidate === winner">
+        <td>{{ candidate.name }}</td>
+        <td>{{ candidate.party }}</td>
+        <td>{{ candidate.votes }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

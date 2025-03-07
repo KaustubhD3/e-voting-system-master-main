@@ -1,0 +1,81 @@
+/* Container styling */
+.results-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Winner Box Styling */
+  .winner-box {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #27ae60;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  /* Table Styling */
+  .results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Table Header Styling */
+  .results-table thead {
+    background: #2c3e50;
+    color: white;
+  }
+  
+  .results-table th {
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  /* Table Rows Styling */
+  .results-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .results-table tr:nth-child(even) {
+    background: #ecf0f1;
+  }
+  
+  .results-table td {
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  /* Winner Row Highlight */
+  .winner-row {
+    background: #27ae60 !important;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Hover Effect */
+  .results-table tr:hover {
+    background: #dfe6e9;
+    transition: 0.3s;
+  }
+  

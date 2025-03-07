@@ -7,6 +7,7 @@ import { WebcamModule } from 'ngx-webcam'; // Import the WebcamModule
 import { HttpClient, HttpClientModule,provideHttpClient, withFetch } from '@angular/common/http';
 import { AfterAdminLoginComponent } from './after-admin-login/after-admin-login.component';
 import { AfterVoterLoginComponent } from './after-voter-login/after-voter-login.component';
+import { CandidateResultsComponent } from './candidate-results/candidate-results.component';
 //import { AfterVoterLoginComponent } from './after-voter-login/after-voter-login.component';
 
 
@@ -16,6 +17,7 @@ import { AfterVoterLoginComponent } from './after-voter-login/after-voter-login.
     EvotingComponent,
     AfterAdminLoginComponent,
     AfterVoterLoginComponent,
+    CandidateResultsComponent,
     //AfterVoterLoginComponent,
    
   ],

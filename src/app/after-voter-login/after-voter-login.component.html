@@ -1,4 +1,4 @@
-<div *ngIf="app.id === 2">
+<div *ngIf="app.id === 2 && time_end==false ">
   <div class="container">
     <h2 class="title">Candidate List</h2>
 
@@ -24,9 +24,15 @@
         <tr *ngFor="let candidate of candidates">
           <td>{{ candidate.name }}</td>
           <td>{{ candidate.party }}</td>
-          <td><img [src]="candidate.partySymbol" alt="Party Symbol" class="symbol-img" /></td>
           <td>
-            <button class="vote-btn" (click)="voteForCandidate(candidate.id)" [disabled]="hasVoted || !isVotingAllowed">
+            <img [src]="'assets/' + candidate.partySymbol" alt="Party Symbol" class="symbol-img" />
+          </td>
+          <td>
+            <button
+              class="vote-btn"
+              (click)="voteForCandidate(candidate.id)"
+              [disabled]="hasVoted || !isVotingAllowed"
+            >
               {{ hasVoted ? 'Already Voted' : 'Vote' }}
             </button>
           </td>
@@ -34,4 +40,8 @@
       </tbody>
     </table>
   </div>
+</div>
+
+<div *ngIf="time_end">
+  <app-candidate-results></app-candidate-results>
 </div>
